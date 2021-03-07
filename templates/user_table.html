@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<h1>This is the body from user_table</h1>
+{% for o in object %}
+<p>{{ o.name }}</p>
+<p>{{ o.username }}</p>
+<p>{{ o.phone }}</p>
+{% endfor %}
+{% endblock %}

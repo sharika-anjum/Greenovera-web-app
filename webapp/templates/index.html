@@ -15,7 +15,7 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form method="POST" action="log_ch1" class="sign-in-form">
+          <form method="POST" action="log_check" class="sign-in-form">
             {% csrf_token %}
             <h2 class="title">Sign in</h2>
             <div class="input-field">
@@ -26,12 +26,13 @@
               <i class="fas fa-lock"></i>
               <input type="password" placeholder="Password" name="pwd"/>
             </div>
-            <input type="submit" value="Login" class="btn solid" />
-          </form>
-          {% for message in messages%}
+            {% for message in messages%}
                 <b class="text-light">{{message}}</b>
                 {% endfor %}
-          <form class="sign-up-form" method="POST" action="log_ch1">
+            <input type="submit" name="Login" value="Login" class="btn solid" />
+          </form>
+
+          <form class="sign-up-form" method="POST" action="check">
             {% csrf_token %}
             <h2 class="title">Sign up</h2>
             <div class="input-field">
@@ -66,7 +67,7 @@
               <i class="fas fa-map-pin"></i>
               <input type="text" placeholder="Pin" name="pin" />
             </div>
-            <input type="submit" class="btn" value="Sign up" />
+            <input type="submit" class="btn" name="Sign up" value="Sign up" />
           </form>
         </div>
       </div>
@@ -78,7 +79,7 @@
             <p>
               Register fast and be one of US...
             </p>
-            <button class="btn transparent" id="sign-up-btn">
+            <button class="btn transparent" name="Sign up" id="sign-up-btn">
               Sign up
             </button>
           </div>
@@ -90,7 +91,7 @@
             <p>
               What are you waiting for? Sign in...
             </p>
-            <button class="btn transparent" id="sign-in-btn">
+            <button class="btn transparent" name="Login" id="sign-in-btn">
               Sign in
             </button>
           </div>

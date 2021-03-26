@@ -11,6 +11,9 @@ from .forms import *
 def land(request):
     return render(request,"land.html")
 
+def land1(request):
+    return render(request,"land1.html")
+
 def open(request):
     return render(request,"index.html")
 

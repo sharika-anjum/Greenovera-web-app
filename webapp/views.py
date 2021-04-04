@@ -15,7 +15,10 @@ def land1(request):
     return render(request,"land1.html")
 
 def open(request):
-    return render(request,"index.html")
+    c = user.objects.get(cname=cname,id=id)
+    d = user.objects.get(dname=dname,id=id)
+    s = user.objects.get(sname=sname,id=id)
+    return render(request,"index.html",c.cname,d.dname,s.sname,c.id,d.id,s.id)
 
 def check(request):
 

@@ -11,14 +11,18 @@ from .forms import *
 def land(request):
     return render(request,"land.html")
 
+def user(request):
+    return render(request,"users.html")
+
 def land1(request):
     return render(request,"land1.html")
 
 def open(request):
-    c = user.objects.get(cname=cname,id=id)
-    d = user.objects.get(dname=dname,id=id)
-    s = user.objects.get(sname=sname,id=id)
-    return render(request,"index.html",c.cname,d.dname,s.sname,c.id,d.id,s.id)
+    objectlist = country.objects.all()
+    context={
+        'objectlist':objectlist,
+    }
+    return render(request,"index.html",context)
 
 def check(request):
 

@@ -2,108 +2,79 @@
 <html lang="en">
 {% load static %}
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Bootstrap CSS -->
-  <link
-          rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-          crossorigin="anonymous"
-  />
+    <!-- Bootstrap CSS -->
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+            crossorigin="anonymous"
+    />
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
-  <title>Greenovera India Pvt. Ltd.</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
+    <title>Greenovera India Pvt. Ltd.</title>
 </head>
 
 <body>
 <div class="main__title">
-  <img src="{% static 'hello.svg' %}" alt="" />
-  <div class="main__greeting">
-    <h1>Hello Greenoverian !!</h1>
-    <p>Track your Users</p>
-  </div>
+    <img src="{% static 'hello.svg' %}" alt="" />
+    <div class="main__greeting">
+        <h1>Hello Greenoverian !!</h1>
+        <p>Track Device's log</p>
+    </div>
 </div> <br>
 <a href="../home" class="btn btn-lg"><i class="fa fa-home"></i> Back Home</a>
-<a href="../home" class="btn btn-lg pull-right"><i class="fa fa-user-plus"></i> Add user</a><br>
+<a href="../device/" class="btn btn-lg pull-right"><i class="fa fa-info-circle"></i> Check Device Details</a><br>
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."><i class="fa fa-search" style="position: relative;
     z-index: 1;
     left: -25px;"></i>
 
 <table class="table table-bordered table-responsive" id="myTable">
-  <tr class="header">
-    <th style="width:20%;">ID</th>
-    <th style="width:20%;">Name</th>
-    <th style="width:20%;">Block</th>
-    <th style="width:20%;">Village</th>
-    <th style="width:20%;">Device ID</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Sharika</td>
-    <td>abc</td>
-    <td>xyz</td>
-    <td>123</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Aishani</td>
-    <td>bcd</td>
-    <td>lmn</td>
-    <td>23</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Ashish</td>
-    <td>bcd</td>
-    <td>lmn</td>
-    <td>34</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>Ramiz</td>
-    <td>efg</td>
-    <td>xzy</td>
-    <td>101</td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>Saurav</td>
-    <td>abc</td>
-    <td>xyz</td>
-    <td>334</td>
-  </tr>
-  <tr>
-    <td>6</td>
-    <td>Shreya</td>
-    <td>bcd</td>
-    <td>lmn</td>
-    <td>227</td>
-  </tr>
-  <tr>
-    <td>7</td>
-    <td>Kritisha</td>
-    <td>bcd</td>
-    <td>lmn</td>
-    <td>20</td>
-  </tr>
-  <tr>
-    <td>8</td>
-    <td>Devjit</td>
-    <td>efg</td>
-    <td>xzy</td>
-    <td>10</td>
-  </tr>
-  <tr>
-    <td>9</td>
-    <td>Soham</td>
-    <td>abc</td>
-    <td>xyz</td>
-    <td>123</td>
-  </tr>
+    <tr class="header">
+        <th style="width:2%;">Serial No.</th>
+        <th style="width:10%;">Device Name</th>
+        <th style="width:10%;">Type</th>
+        <th style="width:10%;">Date</th>
+        <th style="width:10%;">Time</th>
+        <th style="width:10%;">Voltage</th>
+        <th style="width:10%;">Current</th>
+        <th style="width:10%;">Frequency</th>
+        <th style="width:10%;">Operating time</th>
+        <th style="width:10%;">Status word</th>
+        <th style="width:10%;">Fault code</th>
+        <th style="width:10%;">Last fault</th>
+        <th style="width:10%;">Speed reference</th>
+        <th style="width:10%;">Operating speed</th>
+        <th style="width:10%;">Logic io</th>
+        <th style="width:10%;">Liquid flow</th>
+        <th style="width:10%;">Status</th>
+        <th style="width:10%;">Cumulative flow</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>GIPLC00001</td>
+        <td>500</td>
+        <td>3</td>
+        <td>000</td>
+        <td>00</td>
+        <td>000</td>
+        <td>700</td>
+        <td>000</td>
+        <td>000</td>
+        <td>000</td>
+        <td>000</td>
+        <td>000</td>
+        <td>000</td>
+        <td>000</td>
+        <td>000</td>
+        <td>000</td>
+        <td>000</td>
+    </tr>
+
 
 </table>
 <style>

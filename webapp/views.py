@@ -14,15 +14,23 @@ def land(request):
 def user(request):
     return render(request,"users.html")
 
+def village(request):
+    return render(request,"Village.html")
+
+def fa(request):
+    return render(request,"Funding Agency.html")
+
+def device(request):
+    return render(request,"Device.html")
+
+def dlog(request):
+    return render(request,"Device log.html")
+
 def land1(request):
     return render(request,"land1.html")
 
 def open(request):
-    objectlist = country.objects.all()
-    context={
-        'objectlist':objectlist,
-    }
-    return render(request,"index.html",context)
+    return render(request,"index.html")
 
 def check(request):
 
@@ -47,8 +55,6 @@ def log_check(request):
             u=user.objects.get(name=name,pwd=pwd)
             if u is not None:
                 return redirect("home/")
-
-
             else:
                 messages.info(request,'INVALID CREDENTIALS!')
                 return redirect('/')
